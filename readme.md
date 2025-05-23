@@ -88,6 +88,15 @@ git log --oneline --graph
 git status
 ```
 
+```mermaid
+graph LR;
+    A[untracked] -- "git add" --> B[staged + tracked];
+    C[modified] -- "git add" --> B;
+    B -- "Изменения" --> C;
+    B -- "git commit" --> D[tracked];
+    D -- "Изменения" --> C;
+```
+
 ### Стили оформления сообщений к коммитам
 Стилей существует много, но все их объединяют некоторые общие правила:
 - сообщение о коммите краткое (обычно не более 70 символов)
